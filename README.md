@@ -6,17 +6,16 @@ Sơ yếu lý lịch cá nhân của [Trần Phúc Lan](https://github.com/TranP
 
 ```
 tranphuclan-resume/
-├── content/resume.md   # Nguồn nội dung (Markdown) — chỉnh sửa tại đây
-├── index.html          # CV hiển thị web / in PDF
-├── style.css           # Giao diện
+├── index.html   # Nội dung CV — chỉnh sửa tại đây
+├── style.css    # Giao diện
 └── README.md
 ```
 
 ## Sử dụng
 
-1. Cập nhật thông tin trong `content/resume.md`
-2. Đồng bộ nội dung sang `index.html` (hoặc mở trực tiếp `index.html` để xem)
-3. In ra PDF: mở `index.html` trong trình duyệt → **Print** → **Save as PDF**
+1. Cập nhật thông tin trong `index.html`
+2. Mở `index.html` trong trình duyệt để xem
+3. In ra PDF: **Print** → **Save as PDF**
 
 ## GitHub Pages (tùy chọn)
 
