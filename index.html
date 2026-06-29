@@ -3,94 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sơ yếu lý lịch — Trần Phúc Lan, Frontend Developer" />
-    <title>Trần Phúc Lân — Resume</title>
+    <meta name="description" content="CV — Trần Phúc Lân, Back End Developer" />
+    <title>Trần Phúc Lân — Back End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="toolbar">
+      <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch language">
+        <span class="flag">🇻🇳</span>
+        <span id="lang-label">Tiếng Việt</span>
+      </button>
+    </div>
+
     <main class="resume">
-      <header class="header">
-        <h1>Trần Phúc Lan</h1>
-        <p class="title">Frontend Developer</p>
-        <p class="location">Ho Chi Minh City, Vietnam</p>
-        <ul class="contact">
-          <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-          <li><a href="tel:+84xxxxxxxxx">+84 xxx xxx xxx</a></li>
-          <li><a href="https://github.com/TranPhucLan" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-      </header>
+      <!-- ============ SIDEBAR (cột trái) ============ -->
+      <aside class="sidebar">
+        <div class="avatar" aria-hidden="true">TPL</div>
 
-      <section>
-        <h2>Tóm tắt</h2>
-        <p>
-          Lập trình viên frontend với kinh nghiệm xây dựng giao diện web hiện đại.
-          Tập trung vào React, TypeScript và trải nghiệm người dùng.
-        </p>
-      </section>
+        <h1 class="name">Trần Phúc Lân</h1>
+        <p class="role" data-i18n="role">BACK END DEVELOPER</p>
 
-      <section>
-        <h2>Kinh nghiệm</h2>
-
-        <article class="entry">
-          <div class="entry-header">
-            <h3>Tên công ty — Frontend Developer</h3>
-            <time>MM/YYYY – Hiện tại</time>
-          </div>
-          <ul>
-            <li>Xây dựng tính năng bằng React + TypeScript, cải thiện chỉ số cụ thể</li>
-            <li>Tối ưu hiệu năng trang, giảm thời gian tải</li>
-            <li>Phối hợp với designer và backend trong quy trình Agile/Scrum</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-header">
-            <h3>Tên công ty — Intern / Junior Developer</h3>
-            <time>MM/YYYY – MM/YYYY</time>
-          </div>
-          <ul>
-            <li>Phát triển component UI tái sử dụng, responsive mobile/desktop</li>
-            <li>Viết unit test, tham gia code review</li>
-          </ul>
-        </article>
-      </section>
-
-      <section>
-        <h2>Dự án</h2>
-        <article class="entry">
-          <div class="entry-header">
-            <h3>Tên dự án</h3>
-            <span class="tech">React · TypeScript · Tailwind CSS</span>
-          </div>
-          <ul>
-            <li>Mô tả ngắn vấn đề và giải pháp</li>
+        <section class="side-section">
+          <h2 class="side-title" data-i18n="contact_title">LIÊN HỆ</h2>
+          <ul class="contact">
             <li>
-              Source:
-              <a href="https://github.com/TranPhucLan" target="_blank" rel="noopener">GitHub</a>
+              <span class="ic" aria-hidden="true">✉</span>
+              <a href="mailto:tranphuclan183@gmail.com">tranphuclan183@gmail.com</a>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true">📞</span>
+              <span>0384 *** ***</span>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true">📍</span>
+              <span data-i18n="address">Hoàng Mai, Hà Nội</span>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true">🐙</span>
+              <a href="https://github.com/tranphuclan" target="_blank" rel="noopener">
+                github.com/tranphuclan
+              </a>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true">💼</span>
+              <a href="https://linkedin.com/in/tranphuclan" target="_blank" rel="noopener">
+                linkedin.com/in/tranphuclan
+              </a>
             </li>
           </ul>
-        </article>
-      </section>
+        </section>
 
-      <section>
-        <h2>Kỹ năng</h2>
-        <p>
-          <strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React, Next.js<br />
-          <strong>Tools:</strong> Git, VS Code, Figma, Vite<br />
-          <strong>Khác:</strong> REST API, Responsive Design, Agile
-        </p>
-      </section>
+        <section class="side-section">
+          <h2 class="side-title" data-i18n="skills_title">KỸ NĂNG</h2>
+          <dl class="skill-groups">
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_languages">Languages</dt>
+              <dd data-i18n="skill_languages">Node.js (TypeScript), Python</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_databases">Databases</dt>
+              <dd data-i18n="skill_databases">MongoDB, Redis</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_api">API</dt>
+              <dd data-i18n="skill_api">RESTful, GraphQL, Apollo Server</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_infra">Infrastructure</dt>
+              <dd data-i18n="skill_infra">Docker, Linux</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_ai">AI/ML</dt>
+              <dd data-i18n="skill_ai">RAG pipeline, LLM integration</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_blockchain">Blockchain</dt>
+              <dd data-i18n="skill_blockchain">TRON, TON ecosystem</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_tools">Tools</dt>
+              <dd data-i18n="skill_tools">Git</dd>
+            </div>
+          </dl>
+        </section>
 
-      <section>
-        <h2>Học vấn</h2>
-        <article class="entry">
-          <div class="entry-header">
-            <h3>Tên trường — Chuyên ngành</h3>
-            <time>YYYY – YYYY</time>
-          </div>
-        </article>
-      </section>
+        <section class="side-section">
+          <h2 class="side-title" data-i18n="advantage_title">ĐIỂM MẠNH</h2>
+          <ul class="bullets">
+            <li data-i18n="adv_1">
+              5 năm kinh nghiệm backend trong hệ sinh thái blockchain.
+            </li>
+            <li data-i18n="adv_2">
+              Kinh nghiệm tích hợp RAG/LLM cho chatbot hỗ trợ sản phẩm.
+            </li>
+            <li data-i18n="adv_3">
+              Tối ưu hiệu năng với Redis caching — tăng 50% tốc độ hệ thống.
+            </li>
+            <li data-i18n="adv_4">
+              Phát triển sản phẩm DeFi trên TRON và TON ecosystem.
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- ============ MAIN (cột phải) ============ -->
+      <div class="content">
+        <section class="block">
+          <h2 class="block-title" data-i18n="education_title">HỌC VẤN</h2>
+          <article class="item item--compact">
+            <div class="item-head">
+              <h3 data-i18n="edu_major">Công nghệ Thông tin</h3>
+              <time>2022</time>
+            </div>
+            <p class="item-sub" data-i18n="edu_school">
+              Đại học Kinh doanh và Công nghệ Hà Nội (HUBT)
+            </p>
+          </article>
+        </section>
+
+        <section class="block">
+          <h2 class="block-title" data-i18n="experience_title">KINH NGHIỆM LÀM VIỆC</h2>
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="exp_role">BACKEND DEVELOPER</h3>
+              <time>2021 - 2026</time>
+            </div>
+            <p class="item-sub">Silotech</p>
+            <ul class="bullets">
+              <li data-i18n="exp_1">
+                Xây dựng RESTful API và GraphQL bằng Node.js, Apollo Server, MongoDB — phục vụ 10K+ request/ngày với thời gian phản hồi dưới 200ms.
+              </li>
+              <li data-i18n="exp_2">
+                Thiết kế và triển khai chatbot RAG tích hợp LLM (Python, vector DB) — tự động giải quyết 70%+ câu hỏi hỗ trợ sản phẩm.
+              </li>
+              <li data-i18n="exp_3">
+                Phát triển và ra mắt nhiều hệ thống Telegram bot (Node.js, TON/TRON API) — tăng tương tác người dùng cho 5+ sản phẩm blockchain.
+              </li>
+              <li data-i18n="exp_4">
+                Triển khai lớp cache Redis cho truy vấn MongoDB — giảm 40% tải server và tăng 50% tốc độ tổng thể hệ thống.
+              </li>
+              <li data-i18n="exp_5">
+                Thiết kế schema MongoDB và chiến lược indexing cho sản phẩm DeFi trên hệ sinh thái TRON và TON.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="block">
+          <h2 class="block-title" data-i18n="projects_title">DỰ ÁN</h2>
+
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="prj_1_name">Tronsave: Tối ưu phí giao dịch TRON</h3>
+            </div>
+            <p class="item-meta">
+              <span data-i18n="prj_1_role">Vai trò: Backend Developer</span>
+              <span class="meta-sep">·</span>
+              <span data-i18n="prj_1_stack">Node.js, TypeScript, TRON API, MongoDB, Redis</span>
+            </p>
+            <ul class="bullets">
+              <li data-i18n="prj_1_1">
+                Xử lý hàng nghìn giao dịch mua Energy &amp; Bandwidth mỗi ngày, giảm phí giao dịch TRON cho người dùng lên đến 30%.
+              </li>
+              <li data-i18n="prj_1_2">
+                Thiết kế pipeline tối ưu phí on-chain với Redis caching để giảm độ trễ tra cứu tài nguyên mạng TRON.
+              </li>
+              <li data-i18n="prj_1_3">
+                Xây dựng API backend đảm bảo giao dịch liền mạch và cơ chế thu nhập thụ động an toàn cho người dùng.
+              </li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="prj_2_name">TobBot: Giao dịch DeFi nhanh trên Telegram cho TON</h3>
+            </div>
+            <p class="item-meta">
+              <span data-i18n="prj_2_role">Vai trò: Backend Developer</span>
+              <span class="meta-sep">·</span>
+              <span data-i18n="prj_2_stack">Node.js, TypeScript, TON API, Telegram Bot API, GraphQL</span>
+            </p>
+            <ul class="bullets">
+              <li data-i18n="prj_2_1">
+                Xây dựng bot Telegram cho phép giao dịch DeFi trên TON với thời gian thực thi dưới 1 giây.
+              </li>
+              <li data-i18n="prj_2_2">
+                Tích hợp GraphQL API và TON blockchain SDK — loại bỏ các bước phức tạp, giảm 80% thao tác so với giao diện web truyền thống.
+              </li>
+              <li data-i18n="prj_2_3">
+                Xử lý giao dịch tần suất cao qua Telegram với cơ chế queue và retry, đảm bảo độ tin cậy trong môi trường DeFi biến động.
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
