@@ -1,6 +1,6 @@
 # tranphuclan-resume
 
-Sơ yếu lý lịch cá nhân của [Trần Phúc Lan](https://tranphuclan.github.io/tranphuclan-resume).
+Sơ yếu lý lịch cá nhân của [Trần Phúc Lân](https://tranphuclan.github.io/tranphuclan-resume).
 
 ## Cấu trúc
 
