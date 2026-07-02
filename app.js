@@ -145,6 +145,21 @@ document.querySelectorAll("[data-i18n]").forEach((el) => {
   viDefaults[el.getAttribute("data-i18n")] = el.innerHTML;
 });
 
+function getLangFromUrl() {
+  const lang = new URLSearchParams(window.location.search).get("lang");
+  return lang === "en" || lang === "vi" ? lang : null;
+}
+
+function syncLangToUrl(lang) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", lang);
+  window.history.replaceState(null, "", url);
+}
+
+function getInitialLanguage() {
+  return getLangFromUrl() ?? (localStorage.getItem("resume-lang") === "en" ? "en" : "vi");
+}
+
 function applyLanguage(lang) {
   const isEn = lang === "en";
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -157,6 +172,7 @@ function applyLanguage(lang) {
   langFlag.textContent = isEn ? "🇬🇧" : "🇻🇳";
   langToggle.setAttribute("aria-pressed", String(isEn));
   localStorage.setItem("resume-lang", lang);
+  syncLangToUrl(lang);
 }
 
 langToggle.addEventListener("click", () => {
@@ -164,4 +180,4 @@ langToggle.addEventListener("click", () => {
   applyLanguage(current === "en" ? "vi" : "en");
 });
 
-applyLanguage(localStorage.getItem("resume-lang") === "en" ? "en" : "vi");
+applyLanguage(getInitialLanguage());
