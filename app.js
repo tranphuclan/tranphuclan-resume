@@ -27,8 +27,6 @@ const translations = {
       "RESTful & GraphQL API design, caching strategies, API monitoring, Microservices, network protocols (REST, SOAP, TCP/IP, HTTP/HTTPS)",
 
     lang_title: "LANGUAGES",
-    lang_vi: "Vietnamese",
-    lang_vi_level: "Native",
     lang_en: "English",
     lang_en_level: "Basic",
 
@@ -38,7 +36,7 @@ const translations = {
 
     experience_title: "WORK EXPERIENCE",
     exp1_role: "Backend Developer — Silotech",
-    exp1_time: "2022 – Present",
+    exp1_time: "2023 – Present",
     exp1_1:
       "Promoted from Fresher to Junior Backend Developer through consistent delivery and ownership of production features.",
     exp1_2:
@@ -46,24 +44,24 @@ const translations = {
     exp1_3:
       "Designed and implemented database schemas for blockchain products using MongoDB and PostgreSQL, covering orders, transactions, and user data with a focus on integrity and scalability.",
     exp1_4:
-      "Owned backend development for AI support chatbots (RAG architecture, data ingestion, embeddings, and LLM integration), achieving 60–70% response accuracy in production.",
+      "Owned backend development for AI support chatbots (RAG architecture, data ingestion, embeddings, and LLM integration), achieving <strong>60–70% response accuracy</strong> in production.",
     exp1_5:
       "Developed and maintained RESTful APIs consumed by internal services and client applications, focusing on reliability and performance.",
     exp1_6:
       "Deployed and maintained backend services using Docker, CI/CD pipelines, and cloud infrastructure (AWS/GCP); collaborated with team members through code reviews and Git-based workflows.",
 
     exp2_role: "Backend Developer — The Parallel",
-    exp2_time: "2021 – 2022",
+    exp2_time: "2021 – 2023",
     exp2_intro:
       "Started as a Backend Intern and was promoted to Fresher Backend Developer after demonstrating strong fundamentals and consistent delivery.",
-    exp2_intern_title: "Intern",
+    exp2_intern_title: "Backend Intern — 2021 — 2022",
     exp2_intern_1:
       "Learned and applied backend fundamentals, building and testing RESTful APIs with Node.js and Express.",
     exp2_intern_2:
       "Worked with MongoDB for data modeling and CRUD operations.",
     exp2_intern_3:
       "Followed Git-based workflows and participated in code reviews, gaining hands-on experience with the team's development and deployment process.",
-    exp2_fresher_title: "Fresher",
+    exp2_fresher_title: "Fresher Backend Developer — 2022 — 2023",
     exp2_fresher_1:
       "Developed and maintained RESTful and GraphQL APIs using Node.js, Apollo, and MongoDB, taking ownership of assigned features end to end.",
     exp2_fresher_2:
