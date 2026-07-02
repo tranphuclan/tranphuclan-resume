@@ -39,24 +39,37 @@ const translations = {
     experience_title: "WORK EXPERIENCE",
     exp1_role: "Backend Developer — Silotech",
     exp1_time: "2022 – Present",
-    exp1_1: "Promoted from Fresher to Junior Backend Developer.",
+    exp1_1:
+      "Promoted from Fresher to Junior Backend Developer through consistent delivery and ownership of production features.",
+    exp1_2:
+      "Built backend services for multiple production Telegram chatbot systems, handling user commands, asynchronous job processing (Kafka/RabbitMQ), and blockchain API integrations.",
     exp1_3:
-      "Developed and launched multiple production Telegram chatbot systems for blockchain products, using Kafka/RabbitMQ for asynchronous message processing.",
+      "Designed and implemented database schemas for blockchain products using MongoDB and PostgreSQL, covering orders, transactions, and user data with a focus on integrity and scalability.",
     exp1_4:
-      "Designed and implemented database schemas for blockchain products using MongoDB and PostgreSQL, ensuring data integrity and scalability.",
+      "Owned backend development for AI support chatbots (RAG architecture, data ingestion, embeddings, and LLM integration), achieving 60–70% response accuracy in production.",
     exp1_5:
-      "Built and maintained AI-powered support chatbots for blockchain products, covering architecture design, data processing, and LLM integration.",
+      "Developed and maintained RESTful APIs consumed by internal services and client applications, focusing on reliability and performance.",
     exp1_6:
-      "Deployed and maintained backend services using Docker, CI/CD pipelines, and cloud infrastructure (AWS/GCP).",
+      "Deployed and maintained backend services using Docker, CI/CD pipelines, and cloud infrastructure (AWS/GCP); collaborated with team members through code reviews and Git-based workflows.",
 
     exp2_role: "Backend Developer — The Parallel",
     exp2_time: "2021 – 2022",
-    exp2_1:
-      "Promoted from Backend Intern to Fresher Backend Developer within the first year — recognized for strong technical fundamentals and consistent delivery.",
-    exp2_2:
-      "Developed RESTful and GraphQL APIs with Node.js, Express, Apollo, and MongoDB; owned assigned features end to end from design to deployment.",
-    exp2_3:
-      "Collaborated with frontend developers on API schema design, built reusable modules, and optimized endpoints to improve system reliability and performance.",
+    exp2_intro:
+      "Started as a Backend Intern and was promoted to Fresher Backend Developer after demonstrating strong fundamentals and consistent delivery.",
+    exp2_intern_title: "Intern",
+    exp2_intern_1:
+      "Learned and applied backend fundamentals, building and testing RESTful APIs with Node.js and Express.",
+    exp2_intern_2:
+      "Worked with MongoDB for data modeling and CRUD operations.",
+    exp2_intern_3:
+      "Followed Git-based workflows and participated in code reviews, gaining hands-on experience with the team's development and deployment process.",
+    exp2_fresher_title: "Fresher",
+    exp2_fresher_1:
+      "Developed and maintained RESTful and GraphQL APIs using Node.js, Apollo, and MongoDB, taking ownership of assigned features end to end.",
+    exp2_fresher_2:
+      "Collaborated with frontend developers to design API schemas and wrote reusable modules.",
+    exp2_fresher_3:
+      "Debugged and optimized existing endpoints to improve reliability and performance.",
 
     projects_title: "PROJECTS",
 
@@ -118,11 +131,15 @@ const translations = {
     prj5_1:
       "Built a desktop app that captures in-game audio and translates dialogue from <strong>English to Vietnamese</strong>, helping non-English-speaking players follow game stories without installing third-party translation patches.",
     prj5_2:
-      "Integrated <strong>OpenAI Whisper</strong> for speech-to-text and <strong>AI models</strong> for translation, with a planned multi-LLM integration layer for flexible provider switching.",
+      "Integrated <strong>OpenAI Whisper</strong> for speech-to-text and <strong>Google Translate API</strong> for translation, with a planned multi-LLM integration layer for flexible provider switching.",
     prj5_3:
-      "Designed subtitle history storage and multi-game support; delivered as a standalone installer. Achieved <strong>1–2s processing latency</strong> and used by <strong>~10 early users</strong> for feedback and iteration.",
+      "Designed subtitle history storage and multi-game support; delivered as a standalone installer for easy personal use.",
+    prj5_4:
+      "Achieved <strong>1-2s processing latency</strong> in the current version; actively improving toward real-time translation and a more practical in-game display experience.",
+    prj5_5:
+      "Released to early users and iterated based on user feedback.",
     prj5_tech:
-      '<strong>Tech:</strong> Python, Whisper, AI Model | <strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
+      '<strong>Tech:</strong> Python, Whisper, Google Translate API | <strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
 
     education_title: "EDUCATION",
     edu_major: "B.Sc. in Information Technology",
