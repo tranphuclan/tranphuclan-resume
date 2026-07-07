@@ -8,66 +8,69 @@ const translations = {
     address: "Ha Noi",
     dob: "18/03/2000",
 
-    skills_title: "SKILLS",
+    skills_title: "TECHNICAL SKILLS",
     skill_cat_languages: "Languages",
     skill_languages: "JavaScript/TypeScript, Python",
     skill_cat_backend: "Backend",
-    skill_backend: "Node.js, Express, GraphQL (Apollo), REST",
+    skill_backend: "Node.js, Express, Fastify, GraphQL (Apollo), REST, WebSocket",
     skill_cat_databases: "Databases",
-    skill_databases: "MongoDB, PostgreSQL, Redis",
+    skill_databases: "MongoDB, MariaDB, Redis",
     skill_cat_queue: "Message Queue",
     skill_queue: "Kafka, RabbitMQ",
     skill_cat_ai_ml: "AI / ML Integration",
     skill_ai_ml:
       "RAG, LLM integration, prompt engineering, embeddings (Ollama), speech-to-text (Whisper), multi-LLM architecture",
+    skill_cat_testing: "Testing",
+    skill_testing: "Jest, unit & integration testing, API testing (Postman)",
     skill_cat_devops: "DevOps & Cloud",
-    skill_devops: "Docker, CI/CD, AWS, GCP, Git",
-    skill_cat_concepts: "Concepts",
-    skill_concepts:
-      "RESTful & GraphQL API design, caching strategies, API monitoring, Microservices, network protocols (REST, SOAP, TCP/IP, HTTP/HTTPS)",
+    skill_devops: "Docker, Linux server deployment, AWS, GCP, Git",
+    skill_cat_human_languages: "Human Languages",
+    skill_human_languages: "English (Intermediate – reading/writing technical docs)",
 
-    lang_title: "LANGUAGES",
-    lang_en: "English",
-    lang_en_level: "Basic",
-
-    summary_title: "SUMMARY",
+    summary_title: "PROFESSIONAL SUMMARY",
     summary_text:
-      "Backend Developer with 4+ years of experience designing and building scalable APIs, real-time systems, and data-intensive applications with Node.js and Python. Experienced in blockchain integrations, AI-powered chatbots, and performance optimization. Strong foundation in database design, message queues, system monitoring, and cloud deployment.",
+      "Backend Developer with 3+ years of professional experience designing and building scalable APIs, real-time systems, and data-intensive applications with Node.js and Python. Hands-on with blockchain integrations, AI-powered chatbots (RAG/LLM), performance optimization, and reliable API delivery. Strong foundation in database design, message queues, caching, system monitoring, and cloud deployment.",
 
     experience_title: "WORK EXPERIENCE",
     exp1_role: "Backend Developer — Silotech",
     exp1_time: "2023 – Present",
     exp1_1:
-      "Promoted from Fresher to Junior Backend Developer through consistent delivery and ownership of production features.",
+      "Designed and built REST APIs for core modules across multiple products, including user management, authentication, notifications, and order history.",
     exp1_2:
-      "Built backend services for multiple production Telegram chatbot systems, handling user commands, asynchronous job processing (Kafka/RabbitMQ), and blockchain API integrations.",
+      "Designed and implemented database schemas (MongoDB, PostgreSQL) for user data, Telegram bot management, notifications, and order/transaction records.",
     exp1_3:
-      "Designed and implemented database schemas for blockchain products using MongoDB and PostgreSQL, covering orders, transactions, and user data with a focus on integrity and scalability.",
+      "Handled asynchronous processing for token receive/transfer flows, using message queues (Kafka/RabbitMQ) to keep on-chain operations reliable and non-blocking.",
     exp1_4:
-      "Owned backend development for AI support chatbots (RAG architecture, data ingestion, embeddings, and LLM integration), achieving <strong>60–70% response accuracy</strong> in production.",
+      "Optimized slow database queries to reduce response time and database load on high-traffic endpoints.",
     exp1_5:
-      "Developed and maintained RESTful APIs consumed by internal services and client applications, focusing on reliability and performance.",
+      "Owned backend development for AI support chatbots (RAG architecture, data ingestion, embeddings, and LLM integration), automating answers to common product and technical questions.",
     exp1_6:
-      "Deployed and maintained backend services using Docker, CI/CD pipelines, and cloud infrastructure (AWS/GCP); collaborated with team members through code reviews and Git-based workflows.",
+      "Wrote unit and integration tests to verify API behavior and reduce regressions before release.",
+    exp1_7:
+      "Deployed and maintained backend services on Linux servers (AWS/GCP) using Docker; collaborated through code reviews and Git-based workflows.",
 
     exp2_role: "Backend Developer — The Parallel",
     exp2_time: "2021 – 2023",
-    exp2_intro:
-      "Started as an Intern and was promoted to Fresher after demonstrating strong fundamentals and consistent delivery.",
-    exp2_intern_title: "Intern",
-    exp2_intern_1:
-      "Learned and applied backend fundamentals, building and testing RESTful APIs with Node.js and Express.",
-    exp2_intern_2:
-      "Worked with MongoDB for data modeling and CRUD operations.",
-    exp2_intern_3:
-      "Followed Git-based workflows and participated in code reviews, gaining hands-on experience with the team's development and deployment process.",
-    exp2_fresher_title: "Fresher",
+    exp2_fresher_title: "Fresher — 2022 – 2023",
     exp2_fresher_1:
-      "Developed and maintained RESTful and GraphQL APIs using Node.js, Apollo, and MongoDB, taking ownership of assigned features end to end.",
+      "Developed REST and GraphQL APIs for internal data-query tools, enabling other teams to retrieve and work with system data.",
     exp2_fresher_2:
-      "Collaborated with frontend developers to design API schemas and wrote reusable modules.",
+      "Built an API monitoring and alerting system to track availability/performance (response time, uptime, throughput) and send real-time alerts via webhooks/messaging when issues were detected.",
     exp2_fresher_3:
-      "Debugged and optimized existing endpoints to improve reliability and performance.",
+      "Collaborated closely with frontend developers to design and refine API schemas for smooth integration.",
+    exp2_fresher_4:
+      "Debugged and optimized existing endpoints to improve reliability and query performance.",
+    exp2_intern_title: "Intern — 2021 – 2022",
+    exp2_intern_1:
+      "Built backend fundamentals across Node.js, Express, Fastify, and GraphQL (Apollo Server), including authentication (JWT), caching (Redis), and WebSocket.",
+    exp2_intern_2:
+      "Worked with multiple databases (MongoDB, MariaDB) for data modeling and queries.",
+    exp2_intern_3:
+      "Learned Git-based development workflows, including branching, commits, pull requests, and resolving merge conflicts in a team environment.",
+    exp2_intern_4:
+      "Participated in code reviews and followed team conventions to deliver assigned tasks on internal backend features.",
+    exp2_intern_5:
+      "Delivered internal data/statistics reporting tasks, aggregating and querying system data for internal use.",
 
     projects_title: "PROJECTS",
 
@@ -89,7 +92,7 @@ const translations = {
     prj2_name: "DeFi Trading Bot (Telegram · TON)",
     prj2_meta: "Silotech · under NDA",
     prj2_1:
-      "Built the backend for a <strong>Telegram DeFi trading bot</strong> on the TON blockchain, allowing users to execute trades directly in chat instead of using complex external tools.",
+      "Built the backend for a <strong>Telegram DeFi trading bot</strong> on the <strong>TON blockchain</strong>, allowing users to execute trades directly in chat instead of using complex external tools.",
     prj2_2:
       "Designed bot command flows and trade orchestration logic to convert multi-step DeFi operations into <strong>one-click trading</strong> actions.",
     prj2_3:
@@ -109,7 +112,7 @@ const translations = {
     prj3_3:
       "Processed and embedded training data using <strong>Ollama</strong>, with a <strong>multi-LLM integration layer</strong> that supports swapping LLM providers without changing core logic.",
     prj3_4:
-      "Achieved <strong>60–70% response accuracy</strong> against business requirements; released to production and actively maintained.",
+      "Achieved <strong>60–70% response accuracy</strong> against business requirements in the first release; released to production and actively maintained with ongoing prompt/data improvements.",
     prj3_tech:
       "<strong>Tech:</strong> Node.js, Ollama, REST API, RAG, multi-LLM integration.",
 
@@ -118,13 +121,13 @@ const translations = {
     prj4_1:
       "Built a monitoring system to track <strong>availability and performance</strong>, measuring response times (DNS, TCP, first-byte), uptime, and throughput.",
     prj4_2:
-      "Implemented <strong>automated alerting and root-cause analysis</strong>, sending real-time alerts via webhooks and messaging platforms to reduce MTTR.",
+      "Implemented <strong>automated alerting and root-cause analysis</strong>, sending real-time alerts via webhooks and messaging platforms to reduce mean time to resolution (MTTR).",
     prj4_3:
       "Developed <strong>traffic management</strong> to monitor traffic volume and detect spikes, preventing system overload.",
     prj4_tech:
       "<strong>Tech:</strong> Node.js, Express, Redis, webhooks, messaging integrations.",
 
-    prj5_name: "game-audio-translator",
+    prj5_name: "Game Dialogue Translation Tool",
     prj5_meta: "Personal Project · 05/2026 – Present",
     prj5_1:
       "Built a desktop app that captures in-game audio and translates dialogue from <strong>English to Vietnamese</strong>, helping non-English-speaking players follow game stories without installing third-party translation patches.",
@@ -133,20 +136,18 @@ const translations = {
     prj5_3:
       "Designed subtitle history storage and multi-game support; delivered as a standalone installer for easy personal use.",
     prj5_4:
-      "Achieved <strong>1-2s processing latency</strong> in the current version; actively improving toward real-time translation and a more practical in-game display experience.",
+      "Achieved <strong>1–2s processing latency</strong> in the current version; actively improving toward real-time translation and a more practical in-game display experience.",
     prj5_5:
       "Released to early users and iterated based on user feedback.",
     prj5_tech:
       '<strong>Tech:</strong> Python, Whisper, Google Translate API | <strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
 
     education_title: "EDUCATION",
-    edu_major: "B.Sc. in Information Technology",
+    edu_major: "B.Sc. in Information Technology (Computer Science)",
     edu_time: "2018 – 2022",
     edu_school: "Hanoi University of Business and Technology (HUBT)",
     edu_1:
-      "Focused on core concepts: object-oriented programming, algorithms, and data structures.",
-    edu_2: "Completed individual and team programming projects.",
-    edu_3: "Participated in coding clubs and competitions.",
+      "Core coursework: object-oriented programming, algorithms, and data structures.",
   },
 };
 

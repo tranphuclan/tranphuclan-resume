@@ -123,7 +123,7 @@
         </section>
 
         <section class="side-section">
-          <h2 class="side-title" data-i18n="skills_title">KỸ NĂNG</h2>
+          <h2 class="side-title" data-i18n="skills_title">KỸ NĂNG KỸ THUẬT</h2>
           <dl class="skill-groups">
             <div class="skill-group">
               <dt data-i18n="skill_cat_languages">Ngôn ngữ</dt>
@@ -131,11 +131,11 @@
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_backend">Backend</dt>
-              <dd data-i18n="skill_backend">Node.js, Express, GraphQL (Apollo), REST</dd>
+              <dd data-i18n="skill_backend">Node.js, Express, Fastify, GraphQL (Apollo), REST, WebSocket</dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_databases">Cơ sở dữ liệu</dt>
-              <dd data-i18n="skill_databases">MongoDB, PostgreSQL, Redis</dd>
+              <dd data-i18n="skill_databases">MongoDB, MariaDB, Redis</dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_queue">Message Queue</dt>
@@ -148,27 +148,18 @@
               </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_devops">DevOps &amp; Cloud</dt>
-              <dd data-i18n="skill_devops">Docker, CI/CD, AWS, GCP, Git</dd>
+              <dt data-i18n="skill_cat_testing">Testing</dt>
+              <dd data-i18n="skill_testing">Jest, unit &amp; integration testing, API testing (Postman)</dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_concepts">Chuyên môn</dt>
-              <dd data-i18n="skill_concepts">
-                Thiết kế API RESTful &amp; GraphQL, chiến lược caching, giám sát API,
-                Microservices, giao thức mạng (REST, SOAP, TCP/IP, HTTP/HTTPS)
-              </dd>
+              <dt data-i18n="skill_cat_devops">DevOps &amp; Cloud</dt>
+              <dd data-i18n="skill_devops">Docker, triển khai Linux server, AWS, GCP, Git</dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_human_languages">Ngoại ngữ</dt>
+              <dd data-i18n="skill_human_languages">Tiếng Anh (Trung cấp – đọc/viết tài liệu kỹ thuật)</dd>
             </div>
           </dl>
-        </section>
-
-        <section class="side-section">
-          <h2 class="side-title" data-i18n="lang_title">NGÔN NGỮ</h2>
-          <ul class="lang-list">
-            <li>
-              <span data-i18n="lang_en">Tiếng Anh</span>
-              <span class="lang-level" data-i18n="lang_en_level">Cơ bản</span>
-            </li>
-          </ul>
         </section>
       </aside>
 
@@ -177,11 +168,11 @@
         <section class="block">
           <h2 class="block-title" data-i18n="summary_title">TÓM TẮT</h2>
           <p class="summary" data-i18n="summary_text">
-            Backend Developer với hơn 4 năm kinh nghiệm thiết kế và xây dựng API mở
-            rộng, hệ thống real-time và ứng dụng xử lý dữ liệu lớn bằng Node.js và
-            Python. Có kinh nghiệm tích hợp blockchain, chatbot AI và tối ưu hiệu
-            năng. Nền tảng vững về thiết kế cơ sở dữ liệu, message queue, giám sát
-            hệ thống và triển khai cloud.
+            Backend Developer với hơn 3 năm kinh nghiệm chuyên nghiệp thiết kế và xây dựng
+            API mở rộng, hệ thống real-time và ứng dụng xử lý dữ liệu lớn bằng Node.js và
+            Python. Thực chiến với tích hợp blockchain, chatbot AI (RAG/LLM), tối ưu hiệu
+            năng và giao API đáng tin cậy. Nền tảng vững về thiết kế cơ sở dữ liệu, message
+            queue, caching, giám sát hệ thống và triển khai cloud.
           </p>
         </section>
 
@@ -195,31 +186,33 @@
             </div>
             <ul class="bullets">
               <li data-i18n="exp1_1">
-                Được thăng tiến từ Fresher lên Junior Backend Developer nhờ giao hàng
-                ổn định và làm chủ các tính năng production.
+                Thiết kế và xây dựng REST API cho các module lõi trên nhiều sản phẩm, bao gồm
+                quản lý người dùng, xác thực, thông báo và lịch sử đơn hàng.
               </li>
               <li data-i18n="exp1_2">
-                Xây dựng dịch vụ backend cho nhiều hệ thống Telegram chatbot production,
-                xử lý lệnh người dùng, xử lý job bất đồng bộ (Kafka/RabbitMQ) và tích hợp
-                API blockchain.
+                Thiết kế và triển khai schema cơ sở dữ liệu (MongoDB, PostgreSQL) cho dữ liệu
+                người dùng, quản lý Telegram bot, thông báo và bản ghi đơn hàng/giao dịch.
               </li>
               <li data-i18n="exp1_3">
-                Thiết kế và triển khai schema cơ sở dữ liệu cho sản phẩm blockchain với
-                MongoDB và PostgreSQL, bao gồm đơn hàng, giao dịch và dữ liệu người dùng,
-                tập trung vào tính toàn vẹn và khả năng mở rộng.
+                Xử lý bất đồng bộ cho luồng nhận/chuyển token, dùng message queue
+                (Kafka/RabbitMQ) để giữ thao tác on-chain đáng tin cậy và không chặn.
               </li>
               <li data-i18n="exp1_4">
-                Làm chủ phát triển backend cho chatbot hỗ trợ AI (kiến trúc RAG, thu thập
-                dữ liệu, embeddings, tích hợp LLM), đạt độ chính xác phản hồi
-                <strong>60–70%</strong> trong production.
+                Tối ưu các truy vấn cơ sở dữ liệu chậm để giảm thời gian phản hồi và tải DB
+                trên các endpoint traffic cao.
               </li>
               <li data-i18n="exp1_5">
-                Phát triển và duy trì RESTful API cho các dịch vụ nội bộ và ứng dụng
-                client, tập trung vào độ tin cậy và hiệu năng.
+                Làm chủ phát triển backend cho chatbot hỗ trợ AI (kiến trúc RAG, thu thập dữ
+                liệu, embeddings, tích hợp LLM), tự động hóa câu trả lời cho câu hỏi sản phẩm
+                và kỹ thuật phổ biến.
               </li>
               <li data-i18n="exp1_6">
-                Triển khai và vận hành dịch vụ backend bằng Docker, CI/CD và hạ tầng cloud
-                (AWS/GCP); phối hợp với đồng đội qua code review và quy trình Git.
+                Viết unit test và integration test để xác minh hành vi API và giảm regression
+                trước khi phát hành.
+              </li>
+              <li data-i18n="exp1_7">
+                Triển khai và vận hành dịch vụ backend trên Linux server (AWS/GCP) bằng Docker;
+                phối hợp qua code review và quy trình Git.
               </li>
             </ul>
           </article>
@@ -229,35 +222,46 @@
               <h3 data-i18n="exp2_role">Backend Developer — The Parallel</h3>
               <time data-i18n="exp2_time">2021 – 2023</time>
             </div>
-            <p class="item-intro" data-i18n="exp2_intro">
-              Bắt đầu với vai trò Intern và được thăng tiến lên Fresher sau khi thể hiện
-              nền tảng kỹ thuật vững và giao hàng ổn định.
-            </p>
-            <p class="role-tier" data-i18n="exp2_intern_title">Intern</p>
-            <ul class="bullets">
-              <li data-i18n="exp2_intern_1">
-                Học và áp dụng kiến thức backend cơ bản, xây dựng và kiểm thử RESTful API
-                với Node.js và Express.
-              </li>
-              <li data-i18n="exp2_intern_2">
-                Làm việc với MongoDB cho mô hình dữ liệu và thao tác CRUD.
-              </li>
-              <li data-i18n="exp2_intern_3">
-                Tuân thủ quy trình Git, tham gia code review và tích lũy kinh nghiệm thực
-                tế về quy trình phát triển và triển khai của team.
-              </li>
-            </ul>
-            <p class="role-tier" data-i18n="exp2_fresher_title">Fresher</p>
+            <p class="role-tier" data-i18n="exp2_fresher_title">Fresher — 2022 – 2023</p>
             <ul class="bullets">
               <li data-i18n="exp2_fresher_1">
-                Phát triển và duy trì RESTful và GraphQL API với Node.js, Apollo và
-                MongoDB, làm chủ tính năng được giao từ đầu đến cuối.
+                Phát triển REST và GraphQL API cho công cụ truy vấn dữ liệu nội bộ, giúp các
+                team khác truy xuất và làm việc với dữ liệu hệ thống.
               </li>
               <li data-i18n="exp2_fresher_2">
-                Phối hợp với frontend thiết kế API schema và viết module tái sử dụng.
+                Xây dựng hệ thống giám sát và cảnh báo API để theo dõi tính khả dụng/hiệu năng
+                (thời gian phản hồi, uptime, throughput) và gửi cảnh báo real-time qua
+                webhook/nhắn tin khi phát hiện sự cố.
               </li>
               <li data-i18n="exp2_fresher_3">
-                Gỡ lỗi và tối ưu các endpoint hiện có để nâng độ tin cậy và hiệu năng.
+                Phối hợp chặt với frontend để thiết kế và tinh chỉnh API schema cho tích hợp
+                mượt mà.
+              </li>
+              <li data-i18n="exp2_fresher_4">
+                Gỡ lỗi và tối ưu các endpoint hiện có để nâng độ tin cậy và hiệu năng truy vấn.
+              </li>
+            </ul>
+            <p class="role-tier" data-i18n="exp2_intern_title">Intern — 2021 – 2022</p>
+            <ul class="bullets">
+              <li data-i18n="exp2_intern_1">
+                Xây dựng nền tảng backend với Node.js, Express, Fastify và GraphQL (Apollo
+                Server), bao gồm xác thực (JWT), caching (Redis) và WebSocket.
+              </li>
+              <li data-i18n="exp2_intern_2">
+                Làm việc với nhiều cơ sở dữ liệu (MongoDB, MariaDB) cho mô hình dữ liệu và truy
+                vấn.
+              </li>
+              <li data-i18n="exp2_intern_3">
+                Học quy trình phát triển Git, bao gồm branching, commit, pull request và giải
+                quyết merge conflict trong môi trường team.
+              </li>
+              <li data-i18n="exp2_intern_4">
+                Tham gia code review và tuân thủ quy ước team để giao các task backend nội bộ
+                được giao.
+              </li>
+              <li data-i18n="exp2_intern_5">
+                Thực hiện các task báo cáo dữ liệu/thống kê nội bộ, tổng hợp và truy vấn dữ
+                liệu hệ thống phục vụ nhu cầu nội bộ.
               </li>
             </ul>
           </article>
@@ -364,8 +368,9 @@
                 LLM mà không cần sửa logic lõi.
               </li>
               <li data-i18n="prj3_4">
-                Đạt <strong>60–70% độ chính xác</strong> phản hồi theo yêu cầu nghiệp
-                vụ; đã đưa lên production và duy trì tích cực.
+                Đạt <strong>60–70% độ chính xác</strong> phản hồi theo yêu cầu nghiệp vụ ở bản
+                phát hành đầu; đã đưa lên production và duy trì tích cực với cải tiến prompt/dữ
+                liệu liên tục.
               </li>
               <li data-i18n="prj3_tech">
                 <strong>Tech:</strong> Node.js, Ollama, REST API, RAG, multi-LLM integration.
@@ -387,7 +392,8 @@
               </li>
               <li data-i18n="prj4_2">
                 Triển khai <strong>cảnh báo tự động và phân tích nguyên nhân gốc</strong>,
-                gửi cảnh báo real-time qua webhook và nền tảng nhắn tin để giảm MTTR.
+                gửi cảnh báo real-time qua webhook và nền tảng nhắn tin để giảm mean time to
+                resolution (MTTR).
               </li>
               <li data-i18n="prj4_3">
                 Phát triển <strong>quản lý lưu lượng</strong> để theo dõi lượng traffic
@@ -401,7 +407,7 @@
 
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="prj5_name">game-audio-translator</h3>
+              <h3 data-i18n="prj5_name">Công cụ dịch hội thoại game</h3>
             </div>
             <p class="item-meta">
               <span data-i18n="prj5_meta">Dự án cá nhân · 05/2026 – Hiện tại</span>
@@ -422,7 +428,7 @@
                 độc lập để dễ sử dụng cá nhân.
               </li>
               <li data-i18n="prj5_4">
-                Phiên bản hiện tại đạt độ trễ xử lý <strong>1-2 giây</strong>; đang tiếp
+                Phiên bản hiện tại đạt độ trễ xử lý <strong>1–2 giây</strong>; đang tiếp
                 tục cải thiện hướng tới dịch gần real-time và trải nghiệm hiển thị trong
                 game thực tế hơn.
               </li>
@@ -444,7 +450,7 @@
           <h2 class="block-title" data-i18n="education_title">HỌC VẤN</h2>
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="edu_major">Cử nhân Công nghệ Thông tin</h3>
+              <h3 data-i18n="edu_major">Cử nhân Công nghệ Thông tin (Computer Science)</h3>
               <time data-i18n="edu_time">2018 – 2022</time>
             </div>
             <p class="item-sub" data-i18n="edu_school">
@@ -452,14 +458,7 @@
             </p>
             <ul class="bullets">
               <li data-i18n="edu_1">
-                Tập trung vào các khái niệm cốt lõi: lập trình hướng đối tượng, giải
-                thuật và cấu trúc dữ liệu.
-              </li>
-              <li data-i18n="edu_2">
-                Hoàn thành các dự án lập trình cá nhân và theo nhóm.
-              </li>
-              <li data-i18n="edu_3">
-                Tham gia các câu lạc bộ lập trình và cuộc thi.
+                Học chính: lập trình hướng đối tượng, giải thuật và cấu trúc dữ liệu.
               </li>
             </ul>
           </article>
