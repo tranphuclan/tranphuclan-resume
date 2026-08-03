@@ -6,3 +6,4 @@ dist/
 *.pdf
 .cv-*.html
 .cursor/
+docs/

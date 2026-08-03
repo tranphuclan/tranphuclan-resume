@@ -10,26 +10,31 @@ const translations = {
 
     skills_title: "TECHNICAL SKILLS",
     skill_cat_languages: "Languages",
-    skill_languages: "JavaScript/TypeScript, Python",
-    skill_cat_backend: "Backend",
-    skill_backend: "Node.js, Express, Fastify, GraphQL (Apollo), REST, WebSocket",
-    skill_cat_databases: "Databases",
-    skill_databases: "MongoDB, MariaDB, Redis",
-    skill_cat_queue: "Message Queue",
-    skill_queue: "Kafka, RabbitMQ",
+    skill_languages: "JavaScript, TypeScript, Python · Go (personal projects)",
+    skill_cat_frameworks: "Frameworks / APIs",
+    skill_frameworks:
+      "Node.js, Express.js, NestJS, Fastify, GraphQL (Apollo), REST, gRPC, WebSocket",
+    skill_cat_patterns: "Patterns / Reliability",
+    skill_patterns:
+      "Event-driven Architecture, Background Jobs (BullMQ/Redis), Distributed Lock, Idempotency, Compensating Actions (rollback), Race-condition handling",
+    skill_cat_data: "Data / Cache / MQ / Observability",
+    skill_data:
+      "MongoDB, PostgreSQL, MySQL, MariaDB, Redis, Kafka, RabbitMQ, Grafana, Sentry",
+    skill_cat_infra: "Infrastructure",
+    skill_infra: "Docker, Linux, AWS, GCP, GitHub Actions, Git",
+    skill_cat_frontend: "Frontend",
+    skill_frontend: "React.js, basic UI integration",
     skill_cat_ai_ml: "AI / ML Integration",
     skill_ai_ml:
       "RAG, LLM integration, prompt engineering, embeddings (Ollama), speech-to-text (Whisper), multi-LLM architecture",
     skill_cat_testing: "Testing",
     skill_testing: "Jest, unit & integration testing, API testing (Postman)",
-    skill_cat_devops: "DevOps & Cloud",
-    skill_devops: "Docker, Linux server deployment, AWS, GCP, Git",
     skill_cat_human_languages: "Human Languages",
     skill_human_languages: "English (Intermediate – reading/writing technical docs)",
 
     summary_title: "PROFESSIONAL SUMMARY",
     summary_text:
-      "Backend Developer with 3+ years of professional experience designing and building scalable APIs, real-time systems, and data-intensive applications with Node.js and Python. Hands-on with blockchain integrations, AI-powered chatbots (RAG/LLM), performance optimization, and reliable API delivery. Strong foundation in database design, message queues, caching, system monitoring, and cloud deployment.",
+      "Backend Developer with 3+ years building production Node.js/TypeScript systems — transactional services, distributed systems, GraphQL/REST APIs, background processing, and AI integrations (RAG/LLM). Comfortable owning a service end-to-end: architecture, implementation, deployment, monitoring, and incident response, and making independent architecture decisions for systems under my direct ownership.",
 
     experience_title: "WORK EXPERIENCE",
     exp1_role: "Backend Developer — Silotech",
@@ -77,17 +82,21 @@ const translations = {
     prj1_name: "Blockchain Transaction Fee Optimization Service (TRON)",
     prj1_meta: "Silotech · under NDA",
     prj1_1:
-      "Designed and built backend services on the <strong>TRON blockchain</strong> to reduce on-chain transaction fees by <strong>~66%</strong> through automated <strong>Energy & Bandwidth</strong> resource management.",
+      "Owned backend for a live <strong>TRON</strong> fee-optimization platform that cut on-chain transaction fees by <strong>~66%</strong> through automated management of network fee resources — handling assets worth <strong>$11M</strong> across <strong>~1,000</strong> active users and <strong>2,000–3,000</strong> orders per day.",
     prj1_2:
-      "Developed REST APIs for resource purchasing, allocation, and usage tracking, enabling users to buy and consume TRON resources without manual on-chain operations.",
+      "Designed <strong>GraphQL</strong> APIs covering the full order lifecycle (create, query, update, cancel, refund) and supporting services: resource reclaiming, sell suggestions, health checks, historical data archiving, automated fund transfer to secure offline wallets, one-step buy-and-activate, and early order termination.",
     prj1_3:
-      "Integrated <strong>TronWeb</strong> to interact with smart contracts, submit transactions, and monitor on-chain status for purchase and consumption flows.",
+      "Developed REST APIs for purchasing, allocating, and tracking fee resources; integrated a blockchain SDK to interact with smart contracts, submit transactions, and monitor on-chain status — enabling users to buy and consume resources without manual blockchain operations.",
     prj1_4:
-      "Designed <strong>MongoDB</strong> schemas for orders, resource balances, and transaction history; used <strong>Redis</strong> caching to reduce database load and improve API response time.",
+      "Designed <strong>MongoDB</strong> schemas for orders, resource balances, and transaction history; implemented a passive-income module that lets users securely rent out unused fee resources on the platform.",
     prj1_5:
-      "Implemented a passive-income module that lets users rent out unused Energy/Bandwidth resources securely through the platform.",
+      "Built an order-confirmation flow that records the order immediately and verifies it against a separate recheck service, automatically rolling back on mismatch — compensating for unreliable asynchronous confirmations from an external blockchain network.",
+    prj1_6:
+      "Identified and resolved race conditions in concurrent order operations to prevent duplicate or inconsistent processing.",
+    prj1_7:
+      "Optimized performance via database indexing, short-TTL <strong>Redis</strong> caching for hot reads, resolver-level batching to avoid N+1 queries, and batch/queue processing; migrated internal APIs from REST to <strong>gRPC</strong> — sustaining <strong>p95/p99 ~50ms</strong> order-query latency at peak throughput of <strong>~6 req/s</strong>.",
     prj1_tech:
-      "<strong>Tech:</strong> Node.js, Express, TronWeb, MongoDB, Redis.",
+      "<strong>Tech:</strong> Node.js, Express, GraphQL, gRPC, TronWeb, MongoDB, Redis.",
 
     prj2_name: "DeFi Trading Bot (Telegram · TON)",
     prj2_meta: "Silotech · under NDA",
@@ -140,7 +149,9 @@ const translations = {
     prj5_5:
       "Released to early users and iterated based on user feedback.",
     prj5_tech:
-      '<strong>Tech:</strong> Python, Whisper, Google Translate API | <strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
+      "<strong>Tech:</strong> Python, Whisper, Google Translate API",
+    prj5_repo:
+      '<strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
 
     education_title: "EDUCATION",
     edu_major: "B.Sc. in Information Technology",

@@ -127,37 +127,60 @@
           <dl class="skill-groups">
             <div class="skill-group">
               <dt data-i18n="skill_cat_languages">Ngôn ngữ</dt>
-              <dd data-i18n="skill_languages">JavaScript/TypeScript, Python</dd>
+              <dd data-i18n="skill_languages">
+                JavaScript, TypeScript, Python · Go (dự án cá nhân)
+              </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_backend">Backend</dt>
-              <dd data-i18n="skill_backend">Node.js, Express, Fastify, GraphQL (Apollo), REST, WebSocket</dd>
+              <dt data-i18n="skill_cat_frameworks">Frameworks / APIs</dt>
+              <dd data-i18n="skill_frameworks">
+                Node.js, Express.js, NestJS, Fastify, GraphQL (Apollo), REST, gRPC,
+                WebSocket
+              </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_databases">Cơ sở dữ liệu</dt>
-              <dd data-i18n="skill_databases">MongoDB, MariaDB, Redis</dd>
+              <dt data-i18n="skill_cat_patterns">Patterns / Reliability</dt>
+              <dd data-i18n="skill_patterns">
+                Event-driven Architecture, Background Jobs (BullMQ/Redis),
+                Distributed Lock, Idempotency, Compensating Actions (rollback),
+                Race-condition handling
+              </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_queue">Message Queue</dt>
-              <dd data-i18n="skill_queue">Kafka, RabbitMQ</dd>
+              <dt data-i18n="skill_cat_data">Data / Cache / MQ / Observability</dt>
+              <dd data-i18n="skill_data">
+                MongoDB, PostgreSQL, MySQL, MariaDB, Redis, Kafka, RabbitMQ,
+                Grafana, Sentry
+              </dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_infra">Hạ tầng</dt>
+              <dd data-i18n="skill_infra">
+                Docker, Linux, AWS, GCP, GitHub Actions, Git
+              </dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_frontend">Frontend</dt>
+              <dd data-i18n="skill_frontend">React.js, basic UI integration</dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_ai_ml">AI / ML Integration</dt>
               <dd data-i18n="skill_ai_ml">
-                RAG, tích hợp LLM, prompt engineering, embeddings (Ollama), speech-to-text (Whisper), kiến trúc multi-LLM
+                RAG, tích hợp LLM, prompt engineering, embeddings (Ollama),
+                speech-to-text (Whisper), kiến trúc multi-LLM
               </dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_testing">Testing</dt>
-              <dd data-i18n="skill_testing">Jest, unit &amp; integration testing, API testing (Postman)</dd>
-            </div>
-            <div class="skill-group">
-              <dt data-i18n="skill_cat_devops">DevOps &amp; Cloud</dt>
-              <dd data-i18n="skill_devops">Docker, triển khai Linux server, AWS, GCP, Git</dd>
+              <dd data-i18n="skill_testing">
+                Jest, unit &amp; integration testing, API testing (Postman)
+              </dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_human_languages">Ngoại ngữ</dt>
-              <dd data-i18n="skill_human_languages">Tiếng Anh (Trung cấp – đọc/viết tài liệu kỹ thuật)</dd>
+              <dd data-i18n="skill_human_languages">
+                Tiếng Anh (Trung cấp – đọc/viết tài liệu kỹ thuật)
+              </dd>
             </div>
           </dl>
         </section>
@@ -168,11 +191,12 @@
         <section class="block">
           <h2 class="block-title" data-i18n="summary_title">TÓM TẮT</h2>
           <p class="summary" data-i18n="summary_text">
-            Backend Developer với hơn 3 năm kinh nghiệm chuyên nghiệp thiết kế và xây dựng
-            API mở rộng, hệ thống real-time và ứng dụng xử lý dữ liệu lớn bằng Node.js và
-            Python. Thực chiến với tích hợp blockchain, chatbot AI (RAG/LLM), tối ưu hiệu
-            năng và giao API đáng tin cậy. Nền tảng vững về thiết kế cơ sở dữ liệu, message
-            queue, caching, giám sát hệ thống và triển khai cloud.
+            Backend Developer với hơn 3 năm xây dựng hệ thống production bằng
+            Node.js/TypeScript — dịch vụ giao dịch (transactional), hệ thống phân tán,
+            GraphQL/REST API, xử lý nền, và tích hợp AI (RAG/LLM). Sẵn sàng sở hữu một
+            service end-to-end: kiến trúc, triển khai, giám sát, xử lý sự cố, và đưa ra
+            quyết định kiến trúc độc lập cho các hệ thống nằm trong phạm vi sở hữu trực
+            tiếp.
           </p>
         </section>
 
@@ -279,31 +303,50 @@
             </p>
             <ul class="bullets">
               <li data-i18n="prj1_1">
-                Thiết kế và phát triển dịch vụ backend trên <strong>blockchain TRON</strong>
-                nhằm giảm phí giao dịch on-chain khoảng <strong>66%</strong> thông qua
-                cơ chế tự động quản lý tài nguyên <strong>Energy &amp; Bandwidth</strong>.
+                Phụ trách backend cho nền tảng tối ưu phí giao dịch <strong>TRON</strong>
+                đang vận hành, giảm phí giao dịch on-chain khoảng <strong>~66%</strong>
+                nhờ quản lý tự động tài nguyên phí mạng — quản lý tài sản
+                <strong>$11M</strong>, khoảng <strong>~1.000</strong> người dùng hoạt
+                động và <strong>2.000–3.000</strong> đơn hàng mỗi ngày.
               </li>
               <li data-i18n="prj1_2">
-                Phát triển REST API cho quy trình mua tài nguyên, phân bổ và theo dõi
-                mức sử dụng, giúp người dùng mua và tiêu thụ tài nguyên TRON mà không
-                cần thao tác on-chain thủ công.
+                Thiết kế API <strong>GraphQL</strong> bao phủ toàn bộ vòng đời đơn hàng
+                (tạo, truy vấn, cập nhật, hủy, hoàn tiền) cùng các dịch vụ hỗ trợ:
+                thu hồi tài nguyên, gợi ý bán, health check, lưu trữ lịch sử, chuyển
+                quỹ tự động sang ví offline an toàn, mua-và-kích-hoạt một bước, và
+                kết thúc đơn hàng sớm.
               </li>
               <li data-i18n="prj1_3">
-                Tích hợp <strong>TronWeb</strong> để tương tác smart contract, gửi giao
-                dịch và theo dõi trạng thái on-chain cho các luồng mua và tiêu thụ tài
-                nguyên.
+                Phát triển REST API cho quy trình mua, phân bổ và theo dõi tài nguyên
+                phí; tích hợp blockchain SDK để tương tác smart contract, gửi giao
+                dịch và theo dõi trạng thái on-chain — giúp người dùng mua và tiêu
+                thụ tài nguyên mà không cần thao tác blockchain thủ công.
               </li>
               <li data-i18n="prj1_4">
                 Thiết kế schema <strong>MongoDB</strong> cho đơn hàng, số dư tài nguyên
-                và lịch sử giao dịch; dùng cache <strong>Redis</strong> để giảm tải cơ sở
-                dữ liệu và cải thiện thời gian phản hồi API.
+                và lịch sử giao dịch; triển khai module thu nhập thụ động cho phép
+                người dùng cho thuê phần tài nguyên phí chưa sử dụng một cách an toàn
+                trên nền tảng.
               </li>
               <li data-i18n="prj1_5">
-                Triển khai module thu nhập thụ động cho phép người dùng cho thuê phần
-                tài nguyên Energy/Bandwidth chưa sử dụng một cách an toàn trên nền tảng.
+                Xây dựng luồng xác nhận đơn hàng: ghi nhận ngay khi tạo, đối chiếu với
+                dịch vụ recheck riêng, tự động rollback khi không khớp — bù trừ cho
+                xác nhận bất đồng bộ không đáng tin cậy từ mạng blockchain bên ngoài.
+              </li>
+              <li data-i18n="prj1_6">
+                Phát hiện và xử lý race condition trong các thao tác đơn hàng đồng thời
+                để tránh xử lý trùng hoặc dữ liệu không nhất quán.
+              </li>
+              <li data-i18n="prj1_7">
+                Tối ưu hiệu năng bằng indexing database, cache <strong>Redis</strong>
+                TTL ngắn cho hot reads, batching ở resolver để tránh N+1, và xử lý
+                batch/queue; migrate API nội bộ từ REST sang <strong>gRPC</strong> —
+                duy trì độ trễ truy vấn đơn hàng <strong>p95/p99 ~50ms</strong> ở mức
+                thông lượng đỉnh khoảng <strong>~6 req/s</strong>.
               </li>
               <li data-i18n="prj1_tech">
-                <strong>Tech:</strong> Node.js, Express, TronWeb, MongoDB, Redis.
+                <strong>Tech:</strong> Node.js, Express, GraphQL, gRPC, TronWeb,
+                MongoDB, Redis.
               </li>
             </ul>
           </article>
@@ -436,7 +479,9 @@
                 Đã phát hành cho người dùng đầu tiên và liên tục cải tiến dựa trên phản hồi.
               </li>
               <li data-i18n="prj5_tech">
-                <strong>Tech:</strong> Python, Whisper, Google Translate API |
+                <strong>Tech:</strong> Python, Whisper, Google Translate API
+              </li>
+              <li data-i18n="prj5_repo">
                 <strong>Repo:</strong>
                 <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">
                   github.com/tranphuclan/game-audio-translator
