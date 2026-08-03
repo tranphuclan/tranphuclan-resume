@@ -164,6 +164,7 @@ const translations = {
 
 const langToggle = document.getElementById("lang-toggle");
 const langFlag = langToggle.querySelector(".flag");
+const styleToggle = document.getElementById("style-toggle");
 const pdfDownload = document.getElementById("pdf-download");
 const dock = document.getElementById("dock");
 const dockHandle = document.getElementById("dock-handle");
@@ -210,7 +211,77 @@ function applyLanguage(lang) {
   pdfDownload.setAttribute("title", pdfTitle);
   localStorage.setItem("resume-lang", lang);
   syncLangToUrl(lang);
+  updateStyleToggleUi();
 }
+
+// ---------- Chuyển đổi kiểu CV: modern (mặc định) ↔ harvard ----------
+
+// @page không thể điều kiện theo class trên <body>, nên lề trang in của
+// bản Harvard được chèn động qua thẻ <style> riêng khi bật kiểu này.
+const harvardPrintStyle = document.createElement("style");
+harvardPrintStyle.textContent = "@media print { @page { margin: 12mm 14mm; } }";
+
+// Bản Harvard cần mục Kỹ năng nằm cuối. Di chuyển DOM thật thay vì dùng
+// flex `order` vì Chrome phân trang sai với `order` khi in.
+const skillsSection = document.querySelector(".side-section--skills");
+const sidebarEl = document.querySelector(".sidebar");
+const contentEl = document.querySelector(".content");
+
+function isHarvardActive() {
+  return document.body.classList.contains("harvard");
+}
+
+function getStyleFromUrl() {
+  const style = new URLSearchParams(window.location.search).get("style");
+  return style === "harvard" || style === "modern" ? style : null;
+}
+
+function syncStyleToUrl(style) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("style", style);
+  window.history.replaceState(null, "", url);
+}
+
+function getInitialStyle() {
+  return (
+    getStyleFromUrl() ??
+    (localStorage.getItem("resume-style") === "harvard" ? "harvard" : "modern")
+  );
+}
+
+function updateStyleToggleUi() {
+  const isEn = document.documentElement.lang === "en";
+  const isHarvard = isHarvardActive();
+  const title = isHarvard
+    ? isEn
+      ? "Switch to modern style"
+      : "Chuyển về kiểu hiện đại"
+    : isEn
+      ? "Switch to Harvard style"
+      : "Chuyển sang kiểu Harvard";
+  styleToggle.setAttribute("aria-pressed", String(isHarvard));
+  styleToggle.setAttribute("aria-label", title);
+  styleToggle.setAttribute("title", title);
+}
+
+function applyStyle(style) {
+  const isHarvard = style === "harvard";
+  document.body.classList.toggle("harvard", isHarvard);
+  if (isHarvard) {
+    document.head.appendChild(harvardPrintStyle);
+    contentEl.appendChild(skillsSection);
+  } else {
+    harvardPrintStyle.remove();
+    sidebarEl.appendChild(skillsSection); // vị trí gốc: cuối sidebar
+  }
+  updateStyleToggleUi();
+  localStorage.setItem("resume-style", style);
+  syncStyleToUrl(style);
+}
+
+styleToggle.addEventListener("click", () => {
+  applyStyle(isHarvardActive() ? "modern" : "harvard");
+});
 
 // Dock nép vào mép phải.
 // - Khi còn khoảng trống bên cạnh (không đè lên CV): luôn mở, ghim cố định.
@@ -286,9 +357,10 @@ langToggle.addEventListener("click", () => {
 // (đã có sẵn CSS @media print) nên bản PDF luôn khớp ngôn ngữ đang xem.
 pdfDownload.addEventListener("click", () => {
   const lang = localStorage.getItem("resume-lang") === "en" ? "en" : "vi";
+  const styleSuffix = isHarvardActive() ? "-Harvard" : "";
   // Tên file gợi ý khi chọn "Save as PDF" chính là document.title.
   const prevTitle = document.title;
-  document.title = `Tran-Phuc-Lan-CV-${lang}`;
+  document.title = `Tran-Phuc-Lan-CV${styleSuffix}-${lang}`;
   window.addEventListener(
     "afterprint",
     () => {
@@ -299,4 +371,5 @@ pdfDownload.addEventListener("click", () => {
   window.print();
 });
 
+applyStyle(getInitialStyle());
 applyLanguage(getInitialLanguage());

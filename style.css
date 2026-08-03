@@ -142,6 +142,18 @@ a:hover {
   background: var(--page-bg);
 }
 
+/* Điểm nhấn khi đang ở kiểu Harvard — icon mũ tốt nghiệp “sáng” lên */
+#style-toggle[aria-pressed="true"] {
+  color: #374151;
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+#style-toggle[aria-pressed="true"]:hover {
+  background: #d1d5db;
+  border-color: #9ca3af;
+}
+
 .dock-btn .flag {
   font-size: 1.3rem;
   line-height: 1;
@@ -477,6 +489,173 @@ a:hover {
   font-weight: 500;
 }
 
+/* ---------- Harvard theme ----------
+ * Kích hoạt bằng class `harvard` trên <body>: cùng một DOM nhưng hiển thị
+ * theo chuẩn Harvard resume — một cột, serif, đen trắng, không ảnh.
+ * `.sidebar`/`.content` dùng display:contents để các section con nằm trong
+ * một luồng block duy nhất; riêng mục Kỹ năng được app.js chuyển xuống cuối
+ * DOM (tránh dùng flex `order` vì Chrome phân trang sai khi in).
+ */
+body.harvard .resume {
+  display: block;
+  max-width: 820px;
+  padding: 3rem 3.25rem;
+  /* Lora (Google Fonts) hỗ trợ đầy đủ dấu tiếng Việt — Georgia thì không. */
+  font-family: "Lora", "Noto Serif", Cambria, Georgia, serif;
+  color: #111;
+}
+
+body.harvard .sidebar,
+body.harvard .content {
+  display: contents;
+}
+
+body.harvard .avatar {
+  display: none;
+}
+
+body.harvard .name {
+  font-size: 1.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+body.harvard .role {
+  margin: 0.35rem 0 0.9rem;
+  color: #444;
+}
+
+/* Liên hệ: bỏ tiêu đề, gộp thành dòng căn giữa dưới tên */
+body.harvard .side-section--contact {
+  margin: 0 0 1.7rem;
+}
+
+body.harvard .side-section--contact .side-title {
+  display: none;
+}
+
+body.harvard .contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 0.15rem;
+  font-size: 0.88rem;
+  color: #222;
+}
+
+body.harvard .contact li {
+  margin: 0;
+  color: #222;
+}
+
+body.harvard .contact li + li::before {
+  content: "·";
+  margin: 0 0.55rem;
+  color: #999;
+}
+
+body.harvard .contact .ic {
+  display: none;
+}
+
+body.harvard .side-section--skills {
+  margin: 0;
+}
+
+/* Tiêu đề mục kiểu Harvard: chữ hoa + kẻ ngang, bỏ thanh màu */
+body.harvard .block-title,
+body.harvard .side-section--skills .side-title {
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: #111;
+  border-bottom: 1px solid #111;
+}
+
+body.harvard .block-title::before {
+  display: none;
+}
+
+body.harvard .block {
+  margin-bottom: 1.6rem;
+}
+
+/* Bỏ chấm và đường timeline */
+body.harvard .item {
+  padding-left: 0;
+}
+
+body.harvard .item::before,
+body.harvard .item::after {
+  display: none;
+}
+
+body.harvard .item-head h3 {
+  color: #111;
+}
+
+body.harvard .item-head time {
+  font-weight: 400;
+  font-style: italic;
+  color: #333;
+}
+
+body.harvard .item-meta,
+body.harvard .item-sub,
+body.harvard .role-tier {
+  font-style: italic;
+  color: #444;
+}
+
+body.harvard .summary,
+body.harvard .item-intro,
+body.harvard .bullets li {
+  color: #1a1a1a;
+}
+
+body.harvard .bullets a,
+body.harvard .item-link a {
+  color: #111;
+  text-decoration: underline;
+}
+
+body.harvard .contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+body.harvard .contact a:hover {
+  text-decoration: underline;
+}
+
+/* Kỹ năng: dạng "Nhóm: giá trị" */
+body.harvard .skill-group {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+body.harvard .skill-group dt {
+  flex: none;
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111;
+}
+
+body.harvard .skill-group dt::after {
+  content: ":";
+}
+
+body.harvard .skill-group dd {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
   .resume {
@@ -486,6 +665,10 @@ a:hover {
 
   .content {
     padding: 1.75rem 1.35rem;
+  }
+
+  body.harvard .resume {
+    padding: 1.75rem 1.25rem;
   }
 
   .toolbar {
@@ -558,6 +741,13 @@ a:hover {
     page-break-inside: avoid;
   }
 
+  /* Không để tiêu đề mục mồ côi ở cuối trang */
+  .block-title,
+  .side-title {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
   /* Emoji dễ bị tách khỏi text khi in */
   .contact .ic {
     display: none;
@@ -565,6 +755,29 @@ a:hover {
 
   .item::after {
     display: none;
+  }
+
+  /* ----- Bản Harvard khi in ----- */
+  body.harvard .resume {
+    /*
+     * Block flow một cột để Chrome phân trang chuẩn.
+     * Lề trang thật (@page) do app.js chèn khi bật Harvard, vì @page
+     * không thể điều kiện theo class trên body.
+     */
+    display: block;
+    padding: 0;
+  }
+
+  body.harvard .sidebar,
+  body.harvard .content {
+    display: contents;
+  }
+
+  /* Một cột dài hơn một trang: cho phép ngắt trong block lớn,
+     vẫn giữ nguyên vẹn từng item/bullet nhờ rule phía trên. */
+  body.harvard .block {
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   @page {

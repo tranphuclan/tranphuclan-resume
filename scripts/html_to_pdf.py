@@ -5,9 +5,11 @@ Script chỉ dùng thư viện chuẩn của Python + Google Chrome đã cài s�
 không cần cài thêm Node.js hay package nào.
 
 Cách dùng:
-    python3 scripts/html_to_pdf.py                # xuất cả 2 bản (vi + en)
-    python3 scripts/html_to_pdf.py --lang vi      # chỉ bản tiếng Việt
-    python3 scripts/html_to_pdf.py --lang en      # chỉ bản tiếng Anh
+    python3 scripts/html_to_pdf.py                   # xuất cả 2 bản (vi + en), kiểu hiện đại
+    python3 scripts/html_to_pdf.py --lang vi         # chỉ bản tiếng Việt
+    python3 scripts/html_to_pdf.py --lang en         # chỉ bản tiếng Anh
+    python3 scripts/html_to_pdf.py --style harvard   # bản kiểu Harvard
+    python3 scripts/html_to_pdf.py --style all       # cả 2 kiểu × 2 ngôn ngữ
     python3 scripts/html_to_pdf.py --input index.html --out dist
 """
 
@@ -46,21 +48,22 @@ def find_chrome() -> str:
     )
 
 
-def build_temp_html(source: Path, lang: str) -> Path:
-    """Tạo bản HTML tạm (cùng thư mục để giữ đường dẫn tương đối) và ép ngôn ngữ."""
+def build_temp_html(source: Path, lang: str, style: str) -> Path:
+    """Tạo bản HTML tạm (cùng thư mục để giữ đường dẫn tương đối), ép ngôn ngữ và kiểu."""
     html = source.read_text(encoding="utf-8")
     inject = (
         "\n<script>window.addEventListener('load',function(){"
+        "try{if(typeof applyStyle==='function')applyStyle('%s');}catch(e){}"
         "try{if(typeof applyLanguage==='function')applyLanguage('%s');}catch(e){}"
         "});</script>\n"
-    ) % lang
+    ) % (style, lang)
     if "</body>" in html:
         html = html.replace("</body>", inject + "</body>", 1)
     else:
         html += inject
 
     fd, tmp_name = tempfile.mkstemp(
-        prefix=f".cv-{lang}-", suffix=".html", dir=str(source.parent)
+        prefix=f".cv-{style}-{lang}-", suffix=".html", dir=str(source.parent)
     )
     with os.fdopen(fd, "w", encoding="utf-8") as f:
         f.write(html)
@@ -89,6 +92,7 @@ def render(chrome: str, html_file: Path, out_file: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Convert CV HTML sang PDF")
     parser.add_argument("--lang", choices=["vi", "en", "all"], default="all")
+    parser.add_argument("--style", choices=["modern", "harvard", "all"], default="modern")
     parser.add_argument("--input", default="index.html")
     parser.add_argument("--out", default=".")
     args = parser.parse_args()
@@ -102,16 +106,19 @@ def main() -> None:
 
     chrome = find_chrome()
     langs = ["vi", "en"] if args.lang == "all" else [args.lang]
+    styles = ["modern", "harvard"] if args.style == "all" else [args.style]
 
-    for lang in langs:
-        tmp = build_temp_html(source, lang)
-        try:
-            out_file = out_dir / f"Tran-Phuc-Lan-CV-{lang}.pdf"
-            render(chrome, tmp, out_file)
-            rel = os.path.relpath(out_file, Path.cwd())
-            print(f"✅ Đã tạo: {rel}")
-        finally:
-            tmp.unlink(missing_ok=True)
+    for style in styles:
+        suffix = "-Harvard" if style == "harvard" else ""
+        for lang in langs:
+            tmp = build_temp_html(source, lang, style)
+            try:
+                out_file = out_dir / f"Tran-Phuc-Lan-CV{suffix}-{lang}.pdf"
+                render(chrome, tmp, out_file)
+                rel = os.path.relpath(out_file, Path.cwd())
+                print(f"✅ Đã tạo: {rel}")
+            finally:
+                tmp.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":
