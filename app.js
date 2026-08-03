@@ -10,7 +10,7 @@ const translations = {
 
     skills_title: "TECHNICAL SKILLS",
     skill_cat_languages: "Languages",
-    skill_languages: "JavaScript, TypeScript, Python · Go (personal projects)",
+    skill_languages: "JavaScript, TypeScript, Python, Go",
     skill_cat_frameworks: "Frameworks / APIs",
     skill_frameworks:
       "Node.js, Express.js, NestJS, Fastify, GraphQL (Apollo), REST, gRPC, WebSocket",
