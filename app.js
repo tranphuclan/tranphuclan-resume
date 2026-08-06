@@ -9,15 +9,18 @@ const translations = {
 
     skills_title: "TECHNICAL SKILLS",
     skill_cat_languages: "Languages",
-    skill_languages: "TypeScript, JavaScript; Python (tooling / personal projects)",
-    skill_cat_frameworks: "Runtime / APIs",
-    skill_frameworks:
-      "Node.js, Express.js, Fastify, GraphQL (Apollo), REST, gRPC, WebSocket",
-    skill_cat_data: "Data / Cache / Messaging",
-    skill_data: "MongoDB, PostgreSQL, MariaDB, Redis, Kafka, RabbitMQ",
-    skill_cat_patterns: "Reliability (production)",
+    skill_languages: "TypeScript, Python",
+    skill_cat_frameworks: "Runtime / Frameworks",
+    skill_frameworks: "Node.js, Express.js, Fastify, GraphQL (Apollo)",
+    skill_cat_apis: "APIs",
+    skill_apis: "REST, gRPC, WebSocket",
+    skill_cat_databases: "Databases",
+    skill_databases: "SQL (PostgreSQL, MariaDB); NoSQL (MongoDB)",
+    skill_cat_messaging: "Messaging",
+    skill_messaging: "Kafka, RabbitMQ",
+    skill_cat_patterns: "Reliability",
     skill_patterns:
-      "Compensating/rollback flows, race-condition handling, async confirmation recheck, background/queue processing, Redis short-TTL caching, DB indexing",
+      "Compensating rollback, race-condition handling, async recheck, queue-based processing, caching, DB indexing",
     skill_cat_auth: "Auth / Integration",
     skill_auth:
       "JWT authentication, Telegram Bot API, blockchain SDK integration (TRON / TON)",
@@ -25,8 +28,7 @@ const translations = {
     skill_ai_ml:
       "RAG pipelines, embeddings (Ollama), multi-LLM provider abstraction, prompt tuning",
     skill_cat_infra: "Infrastructure / Observability",
-    skill_infra:
-      "Docker, Linux, AWS/GCP (basic usage: deploying & running services), Grafana, Git",
+    skill_infra: "Docker, Linux, Grafana, Git",
     skill_cat_testing: "Testing",
     skill_testing: "Jest (unit & integration), API testing (Postman)",
     skill_cat_human_languages: "English",
@@ -58,7 +60,7 @@ const translations = {
     exp1_9:
       "Built a <strong>RAG support chatbot</strong> (docs/FAQ ingestion, embeddings via Ollama, multi-LLM provider layer) for product and fee/technical questions; shipped to production and refined prompts/knowledge base from real support usage.",
     exp1_10:
-      "Wrote unit/integration tests for critical API behavior; deployed and operated services on Linux (<strong>AWS/GCP</strong>) with Docker.",
+      "Wrote unit/integration tests for critical API behavior; deployed and operated services on Linux with Docker.",
 
     exp2_role: "Backend Developer — The Parallel",
     exp2_time: "2021 – 2023",
