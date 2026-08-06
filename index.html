@@ -129,10 +129,6 @@
               <span data-i18n="address">Hà Nội</span>
             </li>
             <li>
-              <span class="ic" aria-hidden="true">🎂</span>
-              <span data-i18n="dob">18/03/2000</span>
-            </li>
-            <li>
               <span class="ic" aria-hidden="true">🐙</span>
               <a href="https://github.com/tranphuclan" target="_blank" rel="noopener">
                 github.com/tranphuclan
@@ -153,52 +149,52 @@
             <div class="skill-group">
               <dt data-i18n="skill_cat_languages">Ngôn ngữ</dt>
               <dd data-i18n="skill_languages">
-                JavaScript, TypeScript, Python, Go
+                TypeScript, JavaScript; Python (tooling / dự án cá nhân)
               </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_frameworks">Frameworks / APIs</dt>
+              <dt data-i18n="skill_cat_frameworks">Runtime / APIs</dt>
               <dd data-i18n="skill_frameworks">
-                Node.js, Express.js, NestJS, Fastify, GraphQL (Apollo), REST, gRPC,
-                WebSocket
+                Node.js, Express.js, Fastify, GraphQL (Apollo), REST, gRPC, WebSocket
               </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_patterns">Patterns / Reliability</dt>
-              <dd data-i18n="skill_patterns">
-                Event-driven Architecture, Background Jobs (BullMQ/Redis),
-                Distributed Lock, Idempotency, Compensating Actions (rollback),
-                Race-condition handling
-              </dd>
-            </div>
-            <div class="skill-group">
-              <dt data-i18n="skill_cat_data">Data / Cache / MQ / Observability</dt>
+              <dt data-i18n="skill_cat_data">Data / Cache / Messaging</dt>
               <dd data-i18n="skill_data">
-                MongoDB, PostgreSQL, MySQL, MariaDB, Redis, Kafka, RabbitMQ,
-                Grafana, Sentry
+                MongoDB, PostgreSQL, MariaDB, Redis, Kafka, RabbitMQ
               </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_infra">Hạ tầng</dt>
-              <dd data-i18n="skill_infra">
-                Docker, Linux, AWS, GCP, GitHub Actions, Git
+              <dt data-i18n="skill_cat_patterns">Reliability (production)</dt>
+              <dd data-i18n="skill_patterns">
+                Compensating/rollback flows, race-condition handling, async confirmation
+                recheck, background/queue processing, Redis short-TTL caching, DB indexing
               </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_frontend">Frontend</dt>
-              <dd data-i18n="skill_frontend">React.js, basic UI integration</dd>
+              <dt data-i18n="skill_cat_auth">Auth / Integration</dt>
+              <dd data-i18n="skill_auth">
+                JWT authentication, Telegram Bot API, blockchain SDK integration (TRON / TON)
+              </dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_ai_ml">AI / ML Integration</dt>
+              <dt data-i18n="skill_cat_ai_ml">AI Integration</dt>
               <dd data-i18n="skill_ai_ml">
-                RAG, tích hợp LLM, prompt engineering, embeddings (Ollama),
-                speech-to-text (Whisper), kiến trúc multi-LLM
+                RAG pipelines, embeddings (Ollama), multi-LLM provider abstraction, prompt
+                tuning
+              </dd>
+            </div>
+            <div class="skill-group">
+              <dt data-i18n="skill_cat_infra">Hạ tầng / Observability</dt>
+              <dd data-i18n="skill_infra">
+                Docker, Linux, AWS/GCP (sử dụng cơ bản: triển khai &amp; vận hành service),
+                Grafana, Git
               </dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_testing">Testing</dt>
               <dd data-i18n="skill_testing">
-                Jest, unit &amp; integration testing, API testing (Postman)
+                Jest (unit &amp; integration), API testing (Postman)
               </dd>
             </div>
             <div class="skill-group">
@@ -216,12 +212,12 @@
         <section class="block">
           <h2 class="block-title" data-i18n="summary_title">TÓM TẮT</h2>
           <p class="summary" data-i18n="summary_text">
-            Backend Developer với hơn 3 năm xây dựng hệ thống production bằng
-            Node.js/TypeScript — dịch vụ giao dịch (transactional), hệ thống phân tán,
-            GraphQL/REST API, xử lý nền, và tích hợp AI (RAG/LLM). Sẵn sàng sở hữu một
-            service end-to-end: kiến trúc, triển khai, giám sát, xử lý sự cố, và đưa ra
-            quyết định kiến trúc độc lập cho các hệ thống nằm trong phạm vi sở hữu trực
-            tiếp.
+            Backend Developer với hơn 4 năm xây dựng dịch vụ production bằng
+            Node.js/TypeScript — GraphQL/REST API, mô hình dữ liệu MongoDB/PostgreSQL,
+            Redis caching, và luồng bất đồng bộ qua message queue. Kinh nghiệm mạnh nhất
+            ở sản phẩm liên quan blockchain: sở hữu API vòng đời đơn hàng, tích hợp SDK
+            on-chain, xử lý lỗi cho xác nhận bất đồng bộ không đáng tin cậy (recheck +
+            compensating rollback), và tối ưu truy vấn/độ trễ dưới tải thực tế.
           </p>
         </section>
 
@@ -235,33 +231,57 @@
             </div>
             <ul class="bullets">
               <li data-i18n="exp1_1">
-                Thiết kế và xây dựng REST API cho các module lõi trên nhiều sản phẩm, bao gồm
-                quản lý người dùng, xác thực, thông báo và lịch sử đơn hàng.
+                Core backend developer cho dịch vụ tối ưu phí <strong>TRON</strong> đang
+                vận hành, giảm phí giao dịch on-chain khoảng <strong>~66%</strong>, hỗ trợ
+                tài sản khoảng <strong>~$11M</strong>, <strong>~1.000</strong> người dùng
+                hoạt động và khoảng <strong>2.000–3.000</strong> đơn hàng mỗi ngày.
               </li>
               <li data-i18n="exp1_2">
-                Thiết kế và triển khai schema cơ sở dữ liệu (MongoDB, PostgreSQL) cho dữ liệu
-                người dùng, quản lý Telegram bot, thông báo và bản ghi đơn hàng/giao dịch.
+                Thiết kế REST API và schema cơ sở dữ liệu (<strong>MongoDB,
+                PostgreSQL</strong>) cho các module dùng chung trên nhiều sản phẩm —
+                quản lý người dùng, xác thực, thông báo, lịch sử đơn hàng và quản trị
+                Telegram bot.
               </li>
               <li data-i18n="exp1_3">
-                Xử lý bất đồng bộ cho luồng nhận/chuyển token, dùng message queue
-                (Kafka/RabbitMQ) để giữ thao tác on-chain đáng tin cậy và không chặn.
+                Phát triển API <strong>GraphQL</strong> và <strong>REST</strong> cho toàn
+                bộ vòng đời đơn hàng (tạo, truy vấn, cập nhật, hủy, hoàn tiền) cùng mua/
+                phân bổ tài nguyên, thu hồi, health check, lưu trữ lịch sử và chuyển quỹ
+                tự động sang ví offline an toàn.
               </li>
               <li data-i18n="exp1_4">
-                Tối ưu các truy vấn cơ sở dữ liệu chậm để giảm thời gian phản hồi và tải DB
-                trên các endpoint traffic cao.
+                Mô hình hóa schema <strong>MongoDB</strong> cho đơn hàng, số dư tài nguyên
+                và lịch sử giao dịch; thêm index và cache <strong>Redis</strong> TTL ngắn
+                cho hot reads; dùng batching ở resolver để giảm truy vấn N+1 GraphQL.
               </li>
               <li data-i18n="exp1_5">
-                Làm chủ phát triển backend cho chatbot hỗ trợ AI (kiến trúc RAG, thu thập dữ
-                liệu, embeddings, tích hợp LLM), tự động hóa câu trả lời cho câu hỏi sản phẩm
-                và kỹ thuật phổ biến.
+                Thiết kế luồng xác nhận đơn hàng: ghi nhận ngay khi tạo + recheck qua
+                <strong>RabbitMQ</strong> để đối chiếu từng giao dịch đã xử lý với trạng
+                thái on-chain TRON, tự động <strong>compensating rollback</strong> khi
+                không khớp — bảo vệ khỏi xác nhận bất đồng bộ không đáng tin cậy từ
+                blockchain.
               </li>
               <li data-i18n="exp1_6">
-                Viết unit test và integration test để xác minh hành vi API và giảm regression
-                trước khi phát hành.
+                Phát hiện và xử lý <strong>race condition</strong> trong các thao tác đơn
+                hàng đồng thời để tránh xử lý trùng hoặc dữ liệu không nhất quán.
               </li>
               <li data-i18n="exp1_7">
-                Triển khai và vận hành dịch vụ backend trên Linux server (AWS/GCP) bằng Docker;
-                phối hợp qua code review và quy trình Git.
+                Migrate một số gọi dịch vụ nội bộ từ REST sang <strong>gRPC</strong>; giữ
+                độ trễ truy vấn đơn hàng <strong>p95 ~50ms</strong> trên production, đo
+                bằng dashboard <strong>Grafana</strong>.
+              </li>
+              <li data-i18n="exp1_8">
+                Triển khai consumer <strong>Kafka</strong> để đồng bộ giao dịch chuyển
+                tiền TRON đến và chỉ cộng số dư trong DB sau khi nhận event on-chain —
+                giữ công việc blockchain không chặn API request.
+              </li>
+              <li data-i18n="exp1_9">
+                Xây dựng <strong>chatbot hỗ trợ RAG</strong> (thu thập docs/FAQ, embeddings
+                qua Ollama, lớp multi-LLM) cho câu hỏi sản phẩm và phí/kỹ thuật; đưa lên
+                production và tinh chỉnh prompt/knowledge base theo thực tế hỗ trợ.
+              </li>
+              <li data-i18n="exp1_10">
+                Viết unit/integration test cho hành vi API quan trọng; triển khai và vận
+                hành dịch vụ trên Linux (<strong>AWS/GCP</strong>) bằng Docker.
               </li>
             </ul>
           </article>
@@ -274,43 +294,29 @@
             <p class="role-tier" data-i18n="exp2_fresher_title">Fresher — 2022 – 2023</p>
             <ul class="bullets">
               <li data-i18n="exp2_fresher_1">
-                Phát triển REST và GraphQL API cho công cụ truy vấn dữ liệu nội bộ, giúp các
-                team khác truy xuất và làm việc với dữ liệu hệ thống.
+                Xây dựng API <strong>REST</strong> và <strong>GraphQL</strong> cho công cụ
+                truy vấn dữ liệu nội bộ phục vụ các team khác.
               </li>
               <li data-i18n="exp2_fresher_2">
-                Xây dựng hệ thống giám sát và cảnh báo API để theo dõi tính khả dụng/hiệu năng
-                (thời gian phản hồi, uptime, throughput) và gửi cảnh báo real-time qua
-                webhook/nhắn tin khi phát hiện sự cố.
+                Xây dựng dịch vụ <strong>giám sát &amp; cảnh báo API</strong>, đo latency
+                (DNS/TCP/TTFB), uptime và throughput; gửi cảnh báo real-time qua
+                webhook/nhắn tin để tăng tốc phản ứng sự cố.
               </li>
               <li data-i18n="exp2_fresher_3">
-                Phối hợp chặt với frontend để thiết kế và tinh chỉnh API schema cho tích hợp
-                mượt mà.
-              </li>
-              <li data-i18n="exp2_fresher_4">
-                Gỡ lỗi và tối ưu các endpoint hiện có để nâng độ tin cậy và hiệu năng truy vấn.
+                Gỡ lỗi và tối ưu endpoint cùng truy vấn DB; phối hợp frontend thiết kế API
+                schema.
               </li>
             </ul>
             <p class="role-tier" data-i18n="exp2_intern_title">Intern — 2021 – 2022</p>
             <ul class="bullets">
               <li data-i18n="exp2_intern_1">
-                Xây dựng nền tảng backend với Node.js, Express, Fastify và GraphQL (Apollo
-                Server), bao gồm xác thực (JWT), caching (Redis) và WebSocket.
+                Triển khai tính năng backend với Node.js (Express/Fastify), GraphQL
+                (Apollo), JWT auth, Redis caching và WebSocket.
               </li>
               <li data-i18n="exp2_intern_2">
-                Làm việc với nhiều cơ sở dữ liệu (MongoDB, MariaDB) cho mô hình dữ liệu và truy
-                vấn.
-              </li>
-              <li data-i18n="exp2_intern_3">
-                Học quy trình phát triển Git, bao gồm branching, commit, pull request và giải
-                quyết merge conflict trong môi trường team.
-              </li>
-              <li data-i18n="exp2_intern_4">
-                Tham gia code review và tuân thủ quy ước team để giao các task backend nội bộ
-                được giao.
-              </li>
-              <li data-i18n="exp2_intern_5">
-                Thực hiện các task báo cáo dữ liệu/thống kê nội bộ, tổng hợp và truy vấn dữ
-                liệu hệ thống phục vụ nhu cầu nội bộ.
+                Làm việc với MongoDB và MariaDB cho mô hình dữ liệu/truy vấn; tuân thủ quy
+                trình Git của team (branching, PR, code review) trên các task báo cáo và
+                backend nội bộ.
               </li>
             </ul>
           </article>
@@ -324,54 +330,18 @@
               <h3 data-i18n="prj1_name">Dịch vụ tối ưu phí giao dịch Blockchain (TRON)</h3>
             </div>
             <p class="item-meta">
-              <span data-i18n="prj1_meta">Silotech · under NDA</span>
+              <span data-i18n="prj1_meta">Silotech · under NDA · production</span>
             </p>
             <ul class="bullets">
               <li data-i18n="prj1_1">
-                Phụ trách backend cho nền tảng tối ưu phí giao dịch <strong>TRON</strong>
-                đang vận hành, giảm phí giao dịch on-chain khoảng <strong>~66%</strong>
-                nhờ quản lý tự động tài nguyên phí mạng — quản lý tài sản
-                <strong>$11M</strong>, khoảng <strong>~1.000</strong> người dùng hoạt
-                động và <strong>2.000–3.000</strong> đơn hàng mỗi ngày.
-              </li>
-              <li data-i18n="prj1_2">
-                Thiết kế API <strong>GraphQL</strong> bao phủ toàn bộ vòng đời đơn hàng
-                (tạo, truy vấn, cập nhật, hủy, hoàn tiền) cùng các dịch vụ hỗ trợ:
-                thu hồi tài nguyên, gợi ý bán, health check, lưu trữ lịch sử, chuyển
-                quỹ tự động sang ví offline an toàn, mua-và-kích-hoạt một bước, và
-                kết thúc đơn hàng sớm.
-              </li>
-              <li data-i18n="prj1_3">
-                Phát triển REST API cho quy trình mua, phân bổ và theo dõi tài nguyên
-                phí; tích hợp blockchain SDK để tương tác smart contract, gửi giao
-                dịch và theo dõi trạng thái on-chain — giúp người dùng mua và tiêu
-                thụ tài nguyên mà không cần thao tác blockchain thủ công.
-              </li>
-              <li data-i18n="prj1_4">
-                Thiết kế schema <strong>MongoDB</strong> cho đơn hàng, số dư tài nguyên
-                và lịch sử giao dịch; triển khai module thu nhập thụ động cho phép
-                người dùng cho thuê phần tài nguyên phí chưa sử dụng một cách an toàn
-                trên nền tảng.
-              </li>
-              <li data-i18n="prj1_5">
-                Xây dựng luồng xác nhận đơn hàng: ghi nhận ngay khi tạo, đối chiếu với
-                dịch vụ recheck riêng, tự động rollback khi không khớp — bù trừ cho
-                xác nhận bất đồng bộ không đáng tin cậy từ mạng blockchain bên ngoài.
-              </li>
-              <li data-i18n="prj1_6">
-                Phát hiện và xử lý race condition trong các thao tác đơn hàng đồng thời
-                để tránh xử lý trùng hoặc dữ liệu không nhất quán.
-              </li>
-              <li data-i18n="prj1_7">
-                Tối ưu hiệu năng bằng indexing database, cache <strong>Redis</strong>
-                TTL ngắn cho hot reads, batching ở resolver để tránh N+1, và xử lý
-                batch/queue; migrate API nội bộ từ REST sang <strong>gRPC</strong> —
-                duy trì độ trễ truy vấn đơn hàng <strong>p95/p99 ~50ms</strong> ở mức
-                thông lượng đỉnh khoảng <strong>~6 req/s</strong>.
+                Nền tảng tối ưu phí cho TRON: người dùng mua và tiêu thụ tài nguyên phí mạng
+                (Energy/Bandwidth) mà không cần thao tác on-chain thủ công; phạm vi công việc
+                gồm API vòng đời đơn hàng, quản lý tài nguyên on-chain, xử lý concurrency/
+                failure và tối ưu độ trễ truy vấn (chi tiết ở phần Kinh nghiệm làm việc).
               </li>
               <li data-i18n="prj1_tech">
-                <strong>Tech:</strong> Node.js, Express, GraphQL, gRPC, TronWeb,
-                MongoDB, Redis.
+                <strong>Tech:</strong> Node.js, Express, GraphQL, gRPC, TronWeb, MongoDB,
+                Redis
               </li>
             </ul>
           </article>
@@ -385,63 +355,39 @@
             </p>
             <ul class="bullets">
               <li data-i18n="prj2_1">
-                Xây dựng backend cho <strong>Telegram DeFi trading bot</strong> trên
-                blockchain TON, cho phép người dùng thực hiện giao dịch trực tiếp
-                trong chat thay vì thao tác thủ công qua các công cụ bên ngoài phức tạp.
+                Backend cho Telegram bot chạy giao dịch DeFi trên <strong>TON</strong> trong
+                chat: luồng command, xác thực lệnh, kết nối ví và phản hồi trạng thái giao
+                dịch qua <strong>TON SDK</strong>.
               </li>
               <li data-i18n="prj2_2">
-                Thiết kế luồng command của bot và logic điều phối giao dịch để chuyển
-                các thao tác DeFi nhiều bước thành trải nghiệm giao dịch <strong>một chạm</strong>.
-              </li>
-              <li data-i18n="prj2_3">
-                Tích hợp <strong>Telegram Bot API</strong> cho tương tác người dùng và
-                <strong>TON SDK</strong> cho thực thi swap/giao dịch on-chain cùng theo
-                dõi trạng thái giao dịch.
-              </li>
-              <li data-i18n="prj2_4">
-                Xử lý kết nối ví, xác thực lệnh và phản hồi kết quả giao dịch trong
-                toàn bộ workflow của bot.
-              </li>
-              <li data-i18n="prj2_5">
-                Hỗ trợ nhiều kịch bản giao dịch trên các sản phẩm DeFi hệ TON nhưng
-                vẫn giữ trải nghiệm người dùng đơn giản và nhanh.
+                Điều phối các luồng swap on-chain nhiều bước thành lệnh bot một thao tác trên
+                nhiều sản phẩm DeFi hệ TON.
               </li>
               <li data-i18n="prj2_tech">
-                <strong>Tech:</strong> Node.js, Telegram Bot API, TON SDK.
+                <strong>Tech:</strong> Node.js, Telegram Bot API, TON SDK
               </li>
             </ul>
           </article>
 
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="prj3_name">Chatbot AI hỗ trợ cho Blockchain TRON</h3>
+              <h3 data-i18n="prj3_name">Chatbot AI hỗ trợ sản phẩm TRON</h3>
             </div>
             <p class="item-meta">
-              <span data-i18n="prj3_meta">Silotech · under NDA</span>
+              <span data-i18n="prj3_meta">Silotech · under NDA · production</span>
             </p>
             <ul class="bullets">
               <li data-i18n="prj3_1">
-                Thiết kế và xây dựng chatbot AI production trên <strong>blockchain
-                TRON</strong> để trả lời câu hỏi về sử dụng sản phẩm, giao dịch/phí
-                (Energy &amp; Bandwidth) và hỗ trợ kỹ thuật.
+                Chatbot RAG trên tài liệu nội bộ/FAQ về sử dụng sản phẩm và khái niệm phí
+                TRON (Energy &amp; Bandwidth).
               </li>
               <li data-i18n="prj3_2">
-                Triển khai kiến trúc <strong>RAG</strong> với knowledge base từ tài
-                liệu nội bộ, FAQ và tài liệu sản phẩm; áp dụng prompt engineering để
-                nâng cao chất lượng phản hồi.
-              </li>
-              <li data-i18n="prj3_3">
-                Xử lý và embedding dữ liệu huấn luyện bằng <strong>Ollama</strong>, với
-                lớp <strong>tích hợp multi-LLM</strong> cho phép thay đổi nhà cung cấp
-                LLM mà không cần sửa logic lõi.
-              </li>
-              <li data-i18n="prj3_4">
-                Đạt <strong>60–70% độ chính xác</strong> phản hồi theo yêu cầu nghiệp vụ ở bản
-                phát hành đầu; đã đưa lên production và duy trì tích cực với cải tiến prompt/dữ
-                liệu liên tục.
+                Embedding/ingestion bằng <strong>Ollama</strong>; lớp tích hợp multi-LLM
+                để đổi nhà cung cấp mà không sửa logic lõi; duy trì trên production với cập
+                nhật prompt/dữ liệu liên tục.
               </li>
               <li data-i18n="prj3_tech">
-                <strong>Tech:</strong> Node.js, Ollama, REST API, RAG, multi-LLM integration.
+                <strong>Tech:</strong> Node.js, Ollama, REST, RAG
               </li>
             </ul>
           </article>
@@ -455,20 +401,17 @@
             </p>
             <ul class="bullets">
               <li data-i18n="prj4_1">
-                Xây dựng hệ thống giám sát <strong>tính khả dụng và hiệu năng</strong>,
-                đo thời gian phản hồi (DNS, TCP, first-byte), uptime và throughput.
+                Dịch vụ giám sát tính khả dụng và hiệu năng API — phân rã thời gian phản hồi
+                (DNS, TCP, first-byte), uptime và throughput — kèm cảnh báo real-time qua
+                webhook/nhắn tin và gợi ý nguyên nhân gốc để giảm MTTR.
               </li>
               <li data-i18n="prj4_2">
-                Triển khai <strong>cảnh báo tự động và phân tích nguyên nhân gốc</strong>,
-                gửi cảnh báo real-time qua webhook và nền tảng nhắn tin để giảm mean time to
-                resolution (MTTR).
-              </li>
-              <li data-i18n="prj4_3">
-                Phát triển <strong>quản lý lưu lượng</strong> để theo dõi lượng traffic
-                và phát hiện đột biến, ngăn hệ thống quá tải.
+                Thêm giám sát lưu lượng và phát hiện đột biến để cảnh báo trước khi hệ thống
+                quá tải.
               </li>
               <li data-i18n="prj4_tech">
-                <strong>Tech:</strong> Node.js, Express, Redis, webhooks, messaging integrations.
+                <strong>Tech:</strong> Node.js, Express, Redis, webhooks, messaging
+                integrations
               </li>
             </ul>
           </article>
@@ -478,30 +421,13 @@
               <h3 data-i18n="prj5_name">Công cụ dịch hội thoại game</h3>
             </div>
             <p class="item-meta">
-              <span data-i18n="prj5_meta">Dự án cá nhân · 05/2026 – Hiện tại</span>
+              <span data-i18n="prj5_meta">Dự án cá nhân</span>
             </p>
             <ul class="bullets">
               <li data-i18n="prj5_1">
-                Xây dựng ứng dụng desktop thu âm thanh trong game và dịch hội thoại
-                từ <strong>tiếng Anh sang tiếng Việt</strong>, giúp người chơi không
-                giỏi tiếng Anh theo dõi cốt truyện mà không cần cài bản vá dịch bên thứ ba.
-              </li>
-              <li data-i18n="prj5_2">
-                Tích hợp <strong>OpenAI Whisper</strong> cho speech-to-text và
-                <strong>Google Translate API</strong> cho dịch thuật, với kế hoạch thêm
-                lớp tích hợp multi-LLM để linh hoạt đổi nhà cung cấp.
-              </li>
-              <li data-i18n="prj5_3">
-                Thiết kế lưu lịch sử phụ đề và hỗ trợ nhiều game; đóng gói thành bộ cài
-                độc lập để dễ sử dụng cá nhân.
-              </li>
-              <li data-i18n="prj5_4">
-                Phiên bản hiện tại đạt độ trễ xử lý <strong>1–2 giây</strong>; đang tiếp
-                tục cải thiện hướng tới dịch gần real-time và trải nghiệm hiển thị trong
-                game thực tế hơn.
-              </li>
-              <li data-i18n="prj5_5">
-                Đã phát hành cho người dùng đầu tiên và liên tục cải tiến dựa trên phản hồi.
+                Công cụ desktop: thu âm thanh trong game → <strong>Whisper</strong> STT →
+                dịch sang tiếng Việt (<strong>Google Translate API</strong>); độ trễ xử lý
+                khoảng 1–2 giây ở phiên bản hiện tại.
               </li>
               <li data-i18n="prj5_tech">
                 <strong>Tech:</strong> Python, Whisper, Google Translate API
